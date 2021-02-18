@@ -1,1 +1,1 @@
-from .unsolved import MovingAverage,MovingAverageWithStockInfo
+from .solved import MovingAverage,MovingAverageWithStockInfo

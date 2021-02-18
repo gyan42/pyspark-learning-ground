@@ -2,6 +2,7 @@ import pyspark
 import pyspark.sql
 from pyspark.sql.types import *
 from context import src
+import pytest_spark
 
 stockPriceInputDir = "./resources/input/stock_prices"
 stockPriceDirtyInputDir = "./resources/input/stock_prices_dirty"
@@ -60,7 +61,7 @@ def test_moving_average_with_stockInfo(spark_session):
     assert type(actualDF.schema['stockName'].dataType) == pyspark.sql.types.StringType
     assert type(actualDF.schema['stockCategory'].dataType) == pyspark.sql.types.StringType
 
-    checkAnswer(actualDF,expectedDF)
+    checkAnswer(actualDF, expectedDF)
 
 def test_moving_average_with_stockInfo_for_a_stock(spark_session):
     actualDF = src.MovingAverageWithStockInfo(spark_session, stockPriceInputDir,stockInfoInputDir, 3)\

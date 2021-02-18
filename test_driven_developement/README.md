@@ -1,5 +1,12 @@
-Python3 project of data engineering assignment
-===
+PySpark Test Driven Development Setup
+
+1. Sample data with matching schema as that of production data
+2. Business logic as testable components
+3. PySpark test modules 
+   - https://pypi.org/project/pyspark-test/
+   - https://pypi.org/project/pytest-spark/ 
+    
+`pytest -s --spark_home=$SPARK_HOME test/unit/dataquality/management/`
 
 **Ensure that you have Python 3, xcode installed and that your PIP3 installation points to it**
 
@@ -26,3 +33,4 @@ $ make uninstall
 or
 pip3 uninstall -y -r requirements.txt
 ```
+
