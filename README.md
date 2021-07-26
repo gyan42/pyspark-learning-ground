@@ -9,6 +9,7 @@ PySpark refresh guide with examples and reference links for quick try outs!
 My machine has following configuration...
 - 6 cores with 12vCores
 - 32GB RAM
+```
 
 Spark Standalone server:
 ```
@@ -22,7 +23,7 @@ sbin/stop-all.sh
 ```
 Spark UI: [http://localhost:8080](http://localhost:8080)   
 Spark Master URL : spark://IMCHLT276:7077
-```
+
 
 ## Spark Session
 
